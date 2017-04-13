@@ -1,4 +1,4 @@
-# Paddle
+## Paddle
 Simple paddle game
 
 ## Work In Progress
