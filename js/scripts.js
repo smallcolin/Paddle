@@ -51,5 +51,13 @@ function movePaddle(event) {
 
 document.addEventListener('keydown', movePaddle);
 
+// SCOREBOARD
+
+function scoreBoard () {
+
+}
+
+document.addEventListener('scoreBoard', scoreBoard);
+
 
 // -----------------------------------------------------------------------------------------------------------
