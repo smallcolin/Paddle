@@ -1,0 +1,88 @@
+body {
+	background-color: black;
+	width: 100%;
+}
+
+#wrap {
+	position: relative;
+	width: 500px;
+	height: 500px;
+}
+
+.aligncenter {
+	text-align: center;
+}
+
+.btn {
+	margin-top: 40px;
+}
+
+.drop {
+	display: block;
+	position: absolute;
+	overflow: hidden;
+	width: 5px;
+	height: 30px;
+	margin: 20px auto;
+}
+
+.scoreboard {
+	background-color: white;
+	margin-top: 20px;
+	padding: 20px;
+}
+
+.block {
+	display: block;
+	position: absolute;
+	width: 30px;
+	height: 30px;
+	margin-top: 20px;
+}
+
+#paddle-wrap {
+	position: relative;
+	width: 100%;
+	height: 500px;
+}
+
+.paddle {
+	display: block;
+	position: absolute;
+	top: 500px;
+	left: 50%;
+	width: 100px;
+	height: 20px;
+}
+
+.grass {
+	display: block;
+	width: 100%;
+	height: 50px;
+	position: absolute;
+	top: 520px;
+}
+
+/*BUTTONS*/
+
+.info-box {
+	display: block;
+	position: absolute;
+	top: 50px;
+	overflow: hidden;
+	background-color: white;
+	color: red;
+	margin: 40px 0;
+	padding: 20px;
+}
+
+/* COLOURS */
+
+.green {background-color: green;}
+.red {background-color: red;}
+.blue {background-color: blue;}
+.orange {background-color: orange;}
+.white {background-color: white;}
+
+
+

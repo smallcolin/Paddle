@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<title>Paddle</title>
+	<link href="css/bootstrap.css" rel="stylesheet" type="text/css" />
+	<link href="css/font-awesome.css" rel="stylesheet" type="text/css" />
+	<link href="css/style.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+
+	<div id="wrap aligncenter">
+		<div class="container">
+			<div class="row">
+				<div class="col-xs-6 aligncenter">
+					<button type="button" class="btn btn-default" onclick="rain()">Bring the rain!!!</button>
+				</div>
+				<div class="col-xs-3 col-xs-offset-3 scoreboard aligncenter">
+					<h5>Score</h5>
+					<p>counter here…</p>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-xs-3">
+					<div id="rain" class="block green aligncenter"></div>
+				</div>
+				<div class="col-xs-3">
+					<div id="rain" class="block red"></div>
+				</div>
+				<div class="col-xs-3">
+					<div id="rain" class="block blue"></div>
+				</div>
+				<div class="col-xs-3">
+					<div id="rain" class="block orange"></div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-xs-3">
+					<div id="rain" class="drop green"></div>
+				</div>
+				<div class="col-xs-3">
+					<div id="rain" class="drop red"></div>
+				</div>
+				<div class="col-xs-3">
+					<div id="rain" class="drop blue"></div>
+				</div>
+				<div class="col-xs-3">
+					<div id="rain" class="drop orange"></div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div id="paddle-wrap">
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-xs-12">
+					<div id="paddle" class="paddle white aligncenter">Paddle</div>
+				</div>
+				<div class="grass green"></div>
+			</div>
+		</div>
+	</div>
+
+	<div class="container">
+		<div class="row">
+			<div class="col-xs-6 col-xs-offset-3">
+				<div class="info-box aligncenter">
+					<h2>Instructions</h2>
+					<p>Press the button to start the rain.  Use left/right keys to move the paddle and stop the drops reaching the ground</p>
+				</div>
+				
+			</div>
+		</div>
+	</div>
+
+	
+
+	<script src="js/scripts.js"></script>
+</body>
+</html>
