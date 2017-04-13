@@ -1,5 +1,5 @@
 ## Paddle
-Simple paddle game
+A simple paddle game built with javascript.
 
 ## Work In Progress
 
