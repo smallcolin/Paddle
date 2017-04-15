@@ -60,7 +60,7 @@ function movePaddle(event) {
 
 document.addEventListener('keydown', movePaddle);
 
-// SCOREBOARD}
+// SCOREBOARD
 
 // since element.offsetLeft only returns the offset relative to the parent element
 // we have to use a workaround (getBoundingClientRect)
