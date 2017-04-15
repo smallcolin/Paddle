@@ -2,7 +2,7 @@ function rain() {
 
 	setInterval(function() {
 
-		var rain = document.getElementsByClassName('drop');	
+		var rain = document.getElementsByClassName('drop');
 		var pos = 0;
 		var id = setInterval(frame, 10);
 
@@ -10,6 +10,14 @@ function rain() {
 			for ( var i = 0; i < rain.length; i++) {
 				if ( pos == 500 ) {
 					clearInterval(id);
+
+                    // increment scoreboard when rain hits the paddle
+                    var paddle = document.getElementById('paddle');
+                    if (getCoords(rain[i]) >= getCoords(paddle) &&
+                    getCoords(rain[i]) + rain[i].offsetWidth <
+                    getCoords(paddle) + paddle.offsetWidth) {
+                        incrementScore();
+                    }
 				}
 				else {
 						pos++;
@@ -18,7 +26,7 @@ function rain() {
 			}
 		}
 
-	}, 1000); 
+	}, 1000);
 }
 
 // PADDLE MOVEMENTS
@@ -31,7 +39,7 @@ function movePaddle(event) {
 
     function leftright() {
         var x = parseInt(getComputedStyle(paddleObj).left);
-	        
+
         if (key == 37) {
         	y = -100;
             --x;
@@ -41,23 +49,35 @@ function movePaddle(event) {
             ++x;
             console.log(x);
         }
-        
+
         return x;
-	   
+
     };
-    
+
     paddleObj.style.left = (leftright()) + y + "px";
 };
 
 document.addEventListener('keydown', movePaddle);
 
-// SCOREBOARD
+// SCOREBOARD}
 
-function scoreBoard () {
+function getCoords(elem) {
+    var box = elem.getBoundingClientRect();
 
+    var body = document.body;
+    var docEl = document.documentElement;
+
+    var scrollLeft = window.pageXOffset || docEl.scrollLeft || body.scrollLeft;
+
+    var clientLeft = docEl.clientLeft || body.clientLeft || 0;
+
+    var left = box.left + scrollLeft - clientLeft;
+
+    return Math.round(left);
 }
 
-document.addEventListener('scoreBoard', scoreBoard);
-
+function incrementScore() {
+    document.getElementById('score-counter').innerHTML++;
+}
 
 // -----------------------------------------------------------------------------------------------------------
