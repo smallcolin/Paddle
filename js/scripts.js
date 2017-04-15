@@ -12,6 +12,7 @@ function rain() {
 					clearInterval(id);
 
                     // increment scoreboard when rain hits the paddle
+                    // by comparing x-axis offset
                     var paddle = document.getElementById('paddle');
                     if (getCoords(rain[i]) >= getCoords(paddle) &&
                     getCoords(rain[i]) + rain[i].offsetWidth <
@@ -61,6 +62,8 @@ document.addEventListener('keydown', movePaddle);
 
 // SCOREBOARD}
 
+// since element.offsetLeft only returns the offset relative to the parent element
+// we have to use a workaround (getBoundingClientRect)
 function getCoords(elem) {
     var box = elem.getBoundingClientRect();
 
