@@ -35,8 +35,6 @@
 
 		var clock = document.getElementById('clock-counter');
 		var time = clock.innerHTML;
-		var time = 5;
-		// var countDownTimer = setInterval(timer(), 1000);
 
 		var countDownTimer = setInterval(function() {
 			time--;
@@ -103,11 +101,4 @@ function getCoords(elem) {
 
 function incrementScore() {
 	document.getElementById('score-counter').innerHTML++;
-}
-
-
-// Countdown Timer
-function timer() {
-	var count = document.getElementById('clock-counter');
-
 }
