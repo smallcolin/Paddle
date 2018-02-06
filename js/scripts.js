@@ -44,7 +44,6 @@
 				alert('Your time is up!');
 			} else {
 				clock.innerHTML = time;
-				console.log(time);
 			}
 		}, 1000);
 
@@ -64,11 +63,9 @@ function movePaddle(event) {
 		if (key == 37) {
 			y = -100;
 			--x;
-			console.log(x);
 		} else if (key == 39) {
 			y = 100;
 			++x;
-			console.log(x);
 		}
 
 		return x;
